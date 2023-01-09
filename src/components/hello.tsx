@@ -1,8 +1,14 @@
-const Hello = () => {
+import { FC } from 'react'
+
+// Mui
+import Box from '@mui/material/Box'
+import Typography from '@mui/material/Typography'
+
+const Hello: FC = () => {
   return (
-    <div>
-      <h1>Hello</h1>
-    </div>
+    <Box sx={{ height: '100vh', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <Typography variant="h2">Hello 🔥</Typography>
+    </Box>
   )
 }
 
