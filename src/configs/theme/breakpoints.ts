@@ -5,9 +5,9 @@ const breakpoints: BreakpointsOptions = {
   values: {
     xs: 0,
     sm: 620,
-    md: 900,
-    lg: 1162,
-    xl: 1444,
+    md: 960,
+    lg: 1242,
+    xl: 1494,
   },
 }
 
