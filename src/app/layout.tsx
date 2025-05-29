@@ -12,7 +12,7 @@ import { AppConfig } from '@/configs'
 import Footer from '@/components/footer'
 
 const plugJakartaSans = Plus_Jakarta_Sans({
-  weight: ['300', '400', '500', '700'],
+  weight: ['300', '400', '500', '700', '800'],
   variable: '--font-plus-jakarta-sans',
   subsets: ['latin'],
 })

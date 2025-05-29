@@ -9,7 +9,9 @@ import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
 import { Link } from 'react-scroll'
 
+// assets
 import MouseIcon from '@/assets/icons/iconamoon--mouse-light.svg'
+import Logo from '@/assets/logo.svg'
 
 // motion
 import { motion, AnimatePresence } from 'framer-motion'
@@ -43,7 +45,7 @@ const HomeHeroContent = () => {
     <motion.div
       initial={{
         opacity: 0,
-        scale: 4,
+        scale: 1.5,
       }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{
@@ -83,13 +85,7 @@ const HomeHeroContent = () => {
               mt: '2px',
             })}
           >
-            <Image
-              src='/images/logo/1x/logo-1x.png'
-              width={100}
-              height={100}
-              quality={90}
-              alt={`Logo ${AppConfig.appName}`}
-            />
+            <Box component={Logo} />
           </Box>
           <Box>
             <AnimatePresence mode='wait'>
@@ -128,7 +124,7 @@ const HomeHeroContent = () => {
               mb: 2,
               fontSize: { xs: 34, md: 46, lg: 62 },
               lineHeight: 1.2,
-              fontWeight: '700',
+              fontWeight: '800',
             }}
           >
             Let&apos;s Grow Your

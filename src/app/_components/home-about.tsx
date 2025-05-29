@@ -105,7 +105,8 @@ const HomeAbout = () => {
         width: '100%',
         py: {
           xs: 10,
-          md: 20,
+          md: 14,
+          lg: 18,
         },
         display: 'flex',
         flexDirection: 'column',
