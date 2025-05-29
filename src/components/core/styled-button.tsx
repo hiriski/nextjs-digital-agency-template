@@ -180,11 +180,4 @@ const StyledButton: FC<Props> = (props: Props) => {
   )
 }
 
-StyledButton.defaultProps = {
-  color: 'primary',
-  variant: 'contained',
-  size: 'medium',
-  rounded: false,
-}
-
 export default StyledButton
