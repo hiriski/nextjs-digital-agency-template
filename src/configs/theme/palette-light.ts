@@ -8,9 +8,9 @@ const palette: PaletteOptions = {
     paper: common.white,
   },
   text: {
-    primary: '#202020',
-    secondary: '#5c5c5c', //grey[500],
-    disabled: grey[400],
+    primary: grey[800],
+    secondary: grey[600],
+    disabled: grey[500],
   },
   divider: alpha('#000', 0.07),
 }

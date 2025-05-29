@@ -4,9 +4,9 @@ const breakpoints: BreakpointsOptions = {
   keys: ['xs', 'sm', 'md', 'lg', 'xl'],
   values: {
     xs: 0,
-    sm: 520,
-    md: 860,
-    lg: 1062,
+    sm: 620,
+    md: 900,
+    lg: 1162,
     xl: 1444,
   },
 }

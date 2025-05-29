@@ -1,6 +1,6 @@
 import { TypographyVariantsOptions } from '@mui/material'
 
-export const fontFamily = 'var(--font-be-vietnam-pro)'
+export const fontFamily = 'var(--font-plus-jakarta-sans)'
 
 const typography: TypographyVariantsOptions = {
   fontFamily,

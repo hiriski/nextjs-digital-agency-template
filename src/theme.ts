@@ -1,33 +1,23 @@
 'use client'
+
+// @mui utils
 import { createTheme as createMuiTheme, Theme } from '@mui/material/styles'
 
-import paletteBase from './configs/theme/palette-base'
-import paletteDark from './configs/theme/palette-dark'
-import paletteLight from './configs/theme/palette-light'
-import typography from './configs/theme/typography'
-import breakpoints from './configs/theme/breakpoints'
-import shadows from './configs/theme/shadows'
+// theme configs
+import { ThemeConfig } from './configs'
 
-export const createTheme = (isDark?: boolean): Theme => {
-  const palette = isDark
-    ? { ...paletteBase, ...paletteDark }
-    : { ...paletteBase, ...paletteLight }
+export const createTheme = (isDarkMode?: boolean): Theme => {
+  const palette = isDarkMode
+    ? { ...ThemeConfig.paletteBase, ...ThemeConfig.paletteDark }
+    : { ...ThemeConfig.paletteBase, ...ThemeConfig.paletteLight }
   return createMuiTheme({
     palette,
-    typography,
-    breakpoints,
-    shadows,
+    typography: ThemeConfig.typography,
+    breakpoints: ThemeConfig.breakpoints,
+    shadows: ThemeConfig.shadows,
   })
 }
 
 const theme = createTheme(false)
 
-export {
-  paletteBase,
-  paletteDark,
-  paletteLight,
-  typography,
-  breakpoints,
-  shadows,
-}
 export default theme
