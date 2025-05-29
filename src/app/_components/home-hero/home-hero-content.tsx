@@ -3,7 +3,6 @@
 import React, { memo, useEffect, useState } from 'react'
 
 // components
-import Image from 'next/image'
 import Box from '@mui/material/Box'
 import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
@@ -17,7 +16,7 @@ import Logo from '@/assets/logo.svg'
 import { motion, AnimatePresence } from 'framer-motion'
 
 // configs
-import { AppConfig } from '@/configs'
+// import { AppConfig } from '@/configs'
 
 const MotionTypography = motion(Typography)
 
