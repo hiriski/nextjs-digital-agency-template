@@ -23,17 +23,13 @@ const StyledButtonRoot = styled('button', {
 })<StyledButtonRootProps>(({ theme, color, variant, size, rounded }) => ({
   cursor: 'pointer',
   minWidth: 40,
-  fontSize: 13,
-  fontWeight: 600,
+  fontSize: 14,
+  fontWeight: 500,
   lineHeight: 1.5,
   letterSpacing: 1,
-
-  // boxShadow: 'rgb(3 3 3 / 12%) 0px 32px 54px',
-
   display: 'inline-flex',
   alignItems: 'center',
   userSelect: 'none',
-  // transform: 'perspective(1px) translateZ(0px)',
   transform: 'unset',
   position: 'relative',
   overflow: 'hidden',
@@ -58,13 +54,13 @@ const StyledButtonRoot = styled('button', {
     borderRadius: '2rem',
   }),
   ...(!rounded && {
-    borderRadius: theme.shape.borderRadius,
+    borderRadius: theme.shape.borderRadius * 2,
   }),
 
   // sizes and variants
   ...(size === 'small' &&
     variant === 'outlined' && {
-      padding: '4px 10px',
+      padding: '6px 10px',
     }),
   ...(size === 'medium' &&
     variant === 'outlined' && {
@@ -72,7 +68,7 @@ const StyledButtonRoot = styled('button', {
     }),
   ...(size === 'large' &&
     variant === 'outlined' && {
-      padding: '10px 18px',
+      padding: '12px 18px',
     }),
 
   ...(size === 'small' &&
@@ -85,7 +81,7 @@ const StyledButtonRoot = styled('button', {
     }),
   ...(size === 'large' &&
     variant !== 'outlined' && {
-      padding: '12px 20px',
+      padding: '14px 20px',
     }),
 
   // variants

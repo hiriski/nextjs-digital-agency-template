@@ -23,6 +23,9 @@ const HomeServices = dynamic(() => import('./_components//home-services'), {
 const HomeCTA = dynamic(() => import('./_components/home-cta'), {
   loading: () => <PageLoader />,
 })
+const HomeContact = dynamic(() => import('./_components/home-contact'), {
+  loading: () => <PageLoader />,
+})
 
 const HomePage = (): JSX.Element => {
   return (
@@ -32,6 +35,7 @@ const HomePage = (): JSX.Element => {
       <HomeMotivation />
       <HomeServices />
       <HomeCTA />
+      <HomeContact />
     </Stack>
   )
 }
