@@ -52,6 +52,22 @@ const HomeServiceItem = ({ item }: ServiceItemProps) => {
         }}
         onClick={() => onClick(item.slug)}
       >
+        <Box
+          sx={{
+            img: {
+              height: 60,
+              width: 'auto',
+            },
+            mb: 3,
+          }}
+        >
+          <Image
+            src={item.image as string}
+            alt={item.title}
+            width={100}
+            height={100}
+          />
+        </Box>
         <Typography
           component='h3'
           variant='h4'

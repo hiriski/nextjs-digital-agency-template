@@ -1,10 +1,12 @@
 export const services: IService[] = [
+  // public/icons/ai.png public/icons/content-strategy.png public/icons/conversation.png public/icons/mobile-app.png public/icons/pantone.png public/icons/shopping.png
   {
     id: 1,
     title: 'Web & Mobile App Development',
     slug: 'dev',
     description:
       "Strategy that involves creating and sharing content on social a website's media platforms",
+    image: '/icons/mobile-app.png',
   },
   {
     id: 2,
@@ -12,6 +14,7 @@ export const services: IService[] = [
     slug: 'marketing',
     description:
       'Lorem ipsum dolor sit amet elit sed, consectetur adipiscing elit, sed do eiusmod tempor incididunt.',
+    image: '/icons/content-strategy.png',
   },
   {
     id: 3,
@@ -19,6 +22,7 @@ export const services: IService[] = [
     slug: 'e-commerce',
     description:
       'Lorem ipsum dolor sit amet elit sed, consectetur adipiscing elit, sed do eiusmod tempor incididunt.',
+    image: '/icons/shopping.png',
   },
   {
     id: 4,
@@ -26,6 +30,7 @@ export const services: IService[] = [
     slug: 'branding',
     description:
       'Lorem ipsum dolor sit amet elit sed, consectetur adipiscing elit, sed do eiusmod tempor incididunt.',
+    image: '/icons/pantone.png',
   },
   {
     id: 5,
@@ -33,6 +38,7 @@ export const services: IService[] = [
     slug: 'consulting',
     description:
       'Lorem ipsum dolor sit amet elit sed, consectetur adipiscing elit, sed do eiusmod tempor incididunt.',
+    image: '/icons/conversation.png',
   },
   {
     id: 6,
@@ -40,5 +46,6 @@ export const services: IService[] = [
     slug: 'ai',
     description:
       'Lorem ipsum dolor sit amet elit sed, consectetur adipiscing elit, sed do eiusmod tempor incididunt.',
+    image: '/icons/ai.png',
   },
 ]
