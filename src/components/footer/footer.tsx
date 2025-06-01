@@ -118,10 +118,7 @@ const Footer: FC = () => {
                   <SocialLinks />
                 </Box>
 
-                <Typography
-                  sx={{ display: 'flex', alignItems: 'center' }}
-                  component='p'
-                >
+                <Stack sx={{ display: 'flex', alignItems: 'center' }}>
                   <Typography variant='subtitle1' sx={{ fontWeight: '500' }}>
                     © {year} | Designed and coded with
                   </Typography>
@@ -152,7 +149,7 @@ const Footer: FC = () => {
                   >
                     Riski
                   </Link>
-                </Typography>
+                </Stack>
               </Box>
             </Grid>
           </Grid>
