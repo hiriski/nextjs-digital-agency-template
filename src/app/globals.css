@@ -97,11 +97,9 @@ video {
   vertical-align: baseline;
 }
 
-code[class*='language-'],
-pre[class*='language-'] {
-  font-family: 'Inconsolata', monospace;
-  font-size: 16px;
-  font-weight: 600;
+img {
+  width: 100%;
+  height: auto;
 }
 
 ::-webkit-scrollbar {
