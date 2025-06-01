@@ -1,6 +1,5 @@
 'use client'
 
-/* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
@@ -90,9 +89,9 @@ const HomeContact = () => {
                     fontWeight: '800',
                   }}
                 >
-                  Collaborate with Us
+                  Let&apos;s make something
+                  <br /> great together.
                 </Typography>
-
                 <Typography
                   variant='h5'
                   sx={{
