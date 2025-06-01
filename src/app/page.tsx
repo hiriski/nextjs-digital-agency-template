@@ -1,22 +1,42 @@
 import { JSX } from 'react'
+import dynamic from 'next/dynamic'
 
-import Box from '@mui/material/Box'
-import { Typography } from '@mui/material'
+// components
+import Stack from '@mui/material/Stack'
+import PageLoader from '@/components/section-loader'
+
+const HomeHero = dynamic(() => import('./_components/home-hero'), {
+  loading: () => <PageLoader />,
+})
+const HomeAbout = dynamic(() => import('./_components/home-about'), {
+  loading: () => <PageLoader />,
+})
+const HomeMotivation = dynamic(
+  () => import('./_components/home-our-motivation'),
+  {
+    loading: () => <PageLoader />,
+  }
+)
+const HomeServices = dynamic(() => import('./_components//home-services'), {
+  loading: () => <PageLoader />,
+})
+const HomeCTA = dynamic(() => import('./_components/home-cta'), {
+  loading: () => <PageLoader />,
+})
+const HomeContact = dynamic(() => import('./_components/home-contact'), {
+  loading: () => <PageLoader />,
+})
 
 const HomePage = (): JSX.Element => {
   return (
-    <Box
-      sx={{
-        height: '100vh',
-        width: '100%',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: 'background.default',
-      }}
-    >
-      <Typography variant='h2'>Hello World</Typography>
-    </Box>
+    <Stack direction='column'>
+      <HomeHero />
+      <HomeAbout />
+      <HomeMotivation />
+      <HomeServices />
+      <HomeCTA />
+      <HomeContact />
+    </Stack>
   )
 }
 

@@ -1,18 +1,26 @@
 import { JSX } from 'react'
 import type { Metadata } from 'next'
-import { Be_Vietnam_Pro } from 'next/font/google'
+import { Plus_Jakarta_Sans } from 'next/font/google'
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter'
 
 // global styles
 import './globals.css'
 
-import { ThemeProvider } from '@mui/material'
+// @mui theme provider
+import { CssBaseline, ThemeProvider } from '@mui/material'
+
+// configs
 import theme from '@/theme'
 import { AppConfig } from '@/configs'
 
-const beVietnamPro = Be_Vietnam_Pro({
-  weight: ['300', '400', '500', '700'],
-  variable: '--font-be-vietnam-pro',
+// components
+import AppBar from '@/components/appbar/app-bar'
+import Footer from '@/components/footer/footer'
+import FooterGithubBanner from '@/components/footer-github-banner'
+
+const plugJakartaSans = Plus_Jakarta_Sans({
+  weight: ['300', '400', '500', '700', '800'],
+  variable: '--font-plus-jakarta-sans',
   subsets: ['latin'],
 })
 
@@ -28,9 +36,15 @@ export default function RootLayout({
 }>): JSX.Element {
   return (
     <html lang='en'>
-      <body className={beVietnamPro.variable}>
+      <body className={plugJakartaSans.variable}>
         <AppRouterCacheProvider options={{ key: 'css' }}>
-          <ThemeProvider theme={theme}>{children}</ThemeProvider>
+          <CssBaseline />
+          <ThemeProvider theme={theme}>
+            <AppBar />
+            {children}
+            <Footer />
+            <FooterGithubBanner />
+          </ThemeProvider>
         </AppRouterCacheProvider>
       </body>
     </html>
