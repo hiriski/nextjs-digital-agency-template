@@ -26,7 +26,7 @@ export const companyMenus: IMenu[] = [
     label: 'Services',
     path: '/services',
     icon: (
-      <Box component={LayersOutlinedIcon} sx={{ width: 22, height: 'auto' }} />
+      <Box component={LayersOutlinedIcon} sx={{ width: 20, height: 'auto' }} />
     ),
   },
   {

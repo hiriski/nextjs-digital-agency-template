@@ -14,6 +14,7 @@ import theme from '@/theme'
 import { AppConfig } from '@/configs'
 
 // components
+import AppBar from '@/components/appbar/app-bar'
 import Footer from '@/components/footer/footer'
 import FooterGithubBanner from '@/components/footer-github-banner'
 
@@ -39,6 +40,7 @@ export default function RootLayout({
         <AppRouterCacheProvider options={{ key: 'css' }}>
           <CssBaseline />
           <ThemeProvider theme={theme}>
+            <AppBar />
             {children}
             <Footer />
             <FooterGithubBanner />
