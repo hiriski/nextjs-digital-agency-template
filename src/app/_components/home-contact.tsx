@@ -22,6 +22,7 @@ const HomeContact = () => {
         sx={{
           position: 'relative',
           backgroundColor: 'background.paper',
+          borderBottom: (theme) => `1px solid ${theme.palette.divider}`,
         }}
       >
         <Box

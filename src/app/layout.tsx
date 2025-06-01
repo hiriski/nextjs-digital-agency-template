@@ -6,10 +6,16 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter'
 // global styles
 import './globals.css'
 
-import { ThemeProvider } from '@mui/material'
+// @mui theme provider
+import { CssBaseline, ThemeProvider } from '@mui/material'
+
+// configs
 import theme from '@/theme'
 import { AppConfig } from '@/configs'
-import Footer from '@/components/footer'
+
+// components
+import Footer from '@/components/footer/footer'
+import FooterGithubBanner from '@/components/footer-github-banner'
 
 const plugJakartaSans = Plus_Jakarta_Sans({
   weight: ['300', '400', '500', '700', '800'],
@@ -31,9 +37,11 @@ export default function RootLayout({
     <html lang='en'>
       <body className={plugJakartaSans.variable}>
         <AppRouterCacheProvider options={{ key: 'css' }}>
+          <CssBaseline />
           <ThemeProvider theme={theme}>
             {children}
             <Footer />
+            <FooterGithubBanner />
           </ThemeProvider>
         </AppRouterCacheProvider>
       </body>

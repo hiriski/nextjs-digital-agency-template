@@ -51,7 +51,7 @@ const HomeCTA = () => {
               mx: 'auto',
               width: {
                 xs: '100%',
-                md: 600,
+                md: 720,
               },
             }}
           >

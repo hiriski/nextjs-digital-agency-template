@@ -1,5 +1,7 @@
+import { ThemeConfig } from '@/configs/theme.config'
+
 declare global {
-  interface IThemeConfig extends ReturnType<ThemeConfig> {}
+  type IThemeConfig = typeof ThemeConfig
 }
 
 export {}

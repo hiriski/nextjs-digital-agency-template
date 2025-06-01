@@ -55,7 +55,7 @@ const HomeServiceItem = ({ item }: ServiceItemProps) => {
         <Box
           sx={{
             img: {
-              height: 60,
+              height: 64,
               width: 'auto',
             },
             mb: 3,

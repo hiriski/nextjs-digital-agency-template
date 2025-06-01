@@ -2,7 +2,7 @@ export const services: IService[] = [
   // public/icons/ai.png public/icons/content-strategy.png public/icons/conversation.png public/icons/mobile-app.png public/icons/pantone.png public/icons/shopping.png
   {
     id: 1,
-    title: 'Web & Mobile App Development',
+    title: 'Web Development',
     slug: 'dev',
     description:
       "Strategy that involves creating and sharing content on social a website's media platforms",

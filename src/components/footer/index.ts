@@ -1,0 +1,7 @@
+export { default as Footer } from './footer'
+export { default as FooterWaves } from './footer-waves'
+export { default as FooterCompanyLinks } from './footer-company-links'
+export { default as FooterContactInfo } from './footer-contact-info'
+export { default as FooterServicesLink } from './footer-services-link'
+export { default as FooterSectionTitle } from './footer-section-title'
+export { default as FooterSupportLinks } from './footer-support-links'

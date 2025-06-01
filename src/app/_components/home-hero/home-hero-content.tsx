@@ -120,15 +120,15 @@ const HomeHeroContent = () => {
           <Typography
             component='h2'
             sx={{
-              mb: 2,
-              fontSize: { xs: 34, md: 46, lg: 62 },
-              lineHeight: 1.2,
+              mb: 4,
+              fontSize: { xs: 32, md: 40, lg: 52 },
+              lineHeight: 1.5,
               fontWeight: '800',
             }}
           >
-            Let&apos;s Grow Your
+            We are Global Digital Brand
             <br />
-            Business.
+            Tech Agency
           </Typography>
           <Typography
             sx={{
