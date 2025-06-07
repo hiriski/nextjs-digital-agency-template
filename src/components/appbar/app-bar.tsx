@@ -21,6 +21,7 @@ import Logo from '@/assets/logo.svg'
 const AppBar: FC = () => {
   const theme = useTheme()
   const { y: scrollY } = useWindowScroll()
+  // const scrollY = 0
   const mobileMatches = useMediaQuery(theme.breakpoints.down('md'))
 
   const router = useRouter()
@@ -41,10 +42,12 @@ const AppBar: FC = () => {
   }, [shouldFloating, theme])
 
   const onClickLogo = useCallback(() => {
-    if (pathName === '/') {
-      window.scrollTo({ top: 0, behavior: 'smooth' })
-    } else {
-      router.push('/')
+    if (typeof window !== 'undefined') {
+      if (pathName === '/') {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      } else {
+        router.push('/')
+      }
     }
   }, [pathName, router])
 

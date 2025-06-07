@@ -36,7 +36,7 @@ const HomeCTA = () => {
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
-            borderRadius: 2,
+            borderRadius: 8,
             color: '#fbfbfb',
           }}
         >

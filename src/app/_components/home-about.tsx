@@ -112,8 +112,7 @@ const HomeAbout = () => {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor:
-          palette.mode === 'dark' ? '#1b2b3c' : 'background.paper',
+        backgroundColor: 'background.paper',
       }}
     >
       <Container>

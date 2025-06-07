@@ -1,7 +1,7 @@
 'use client'
 
 import React, { FC } from 'react'
-import { Box, Container, Typography, Grid, Stack, Link } from '@mui/material'
+import { Box, Container, Typography, Grid, Stack } from '@mui/material'
 import { useTheme } from '@mui/material/styles'
 import {
   FooterWaves,
@@ -118,9 +118,12 @@ const Footer: FC = () => {
                   <SocialLinks />
                 </Box>
 
-                <Stack sx={{ display: 'flex', alignItems: 'center' }}>
+                <Stack
+                  direction='row'
+                  sx={{ display: 'flex', alignItems: 'center' }}
+                >
                   <Typography variant='subtitle1' sx={{ fontWeight: '500' }}>
-                    © {year} | Designed and coded with
+                    © {year} | Made with
                   </Typography>
                   <Box
                     component={HeartIcon}
@@ -131,24 +134,6 @@ const Footer: FC = () => {
                       mx: 0.2,
                     }}
                   />
-                  by
-                  <Link
-                    sx={{
-                      ml: 1,
-                      fontWeight: '500',
-                      color: 'text.primary',
-                      textDecoration: 'none',
-                      '&:hover': {
-                        color: 'primary.main',
-                        textDecoration: 'underline',
-                      },
-                    }}
-                    href='https://github.com/hiriski'
-                    target='_blank'
-                    rel='noreferrer'
-                  >
-                    Riski
-                  </Link>
                 </Stack>
               </Box>
             </Grid>

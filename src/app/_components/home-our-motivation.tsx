@@ -31,7 +31,7 @@ const CONTENT = [
 ]
 
 const HomeOurMotivation = () => {
-  const { palette, breakpoints } = useTheme()
+  const { breakpoints } = useTheme()
   const matchMobile = useMediaQuery(breakpoints.down('sm'))
   return (
     <Box
@@ -40,8 +40,7 @@ const HomeOurMotivation = () => {
         pt: { xs: 8, md: 2 },
         pb: { xs: 8, md: 16, lg: 20 },
         width: '100%',
-        backgroundColor:
-          palette.mode === 'dark' ? '#353753' : 'background.paper',
+        backgroundColor: 'background.paper',
       }}
     >
       <Container>
@@ -117,7 +116,7 @@ const StyledBox = styled('div')(({ theme }) => ({
   },
   boxShadow: theme.shadows[2],
   borderRadius: Number(theme.shape.borderRadius) * 2,
-  backgroundColor: theme.palette.background.paper,
+  backgroundColor: theme.palette.mode === 'dark' ? '#090e22' : '#D1E7FE',
   transition: theme.transitions.create(['background-color', 'transform'], {
     duration: 250,
   }),

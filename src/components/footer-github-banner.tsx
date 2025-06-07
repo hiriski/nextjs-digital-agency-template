@@ -1,24 +1,29 @@
-// components
 'use client'
+import { useCallback, useMemo } from 'react'
 
-import { AppConfig } from '@/configs'
+// components
 import Box from '@mui/material/Box'
 import Stack from '@mui/material/Stack'
-import { useCallback } from 'react'
+import { useTheme } from '@mui/material'
 
-const GITHUB_FOOTER_IMG =
-  'https://github.com/hiriski/hiriski/raw/master/banners/banner-copyright-light(2025).png'
+const Footer = () => {
+  const { palette } = useTheme()
 
-const FooterGithubBanner = () => {
+  const footerBannerImg = useMemo(() => {
+    const paletteMode = palette.mode
+    return `https://github.com/hiriski/hiriski/raw/master/banners/banner-copyright-${paletteMode}(2025).png`
+  }, [palette])
+
   const onClick = useCallback(() => {
-    window.open(AppConfig.authorGithubUrl, '_blank')
+    window.open('https://github.com/hiriski', '_blank')
   }, [])
   return (
     <Box
       sx={(theme) => ({
         width: '100%',
-        backgroundColor: 'background.default',
-        border: `1px solid ${theme.palette.divider}`,
+        backgroundColor:
+          palette.mode === 'dark' ? '#1c1b18' : 'background.default',
+        borderTop: `1px solid ${theme.palette.divider}`,
       })}
     >
       <Stack
@@ -34,7 +39,7 @@ const FooterGithubBanner = () => {
         <Box
           onClick={onClick}
           component='img'
-          src={GITHUB_FOOTER_IMG}
+          src={footerBannerImg}
           alt='Copyright'
           sx={{ width: '100%', cursor: 'pointer' }}
         />
@@ -43,4 +48,4 @@ const FooterGithubBanner = () => {
   )
 }
 
-export default FooterGithubBanner
+export default Footer

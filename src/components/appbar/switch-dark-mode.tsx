@@ -1,27 +1,32 @@
 'use client'
 
-import React, { FC, useCallback, useMemo } from 'react'
+import React, { FC, useCallback } from 'react'
 
 // components
 import Box from '@mui/material/Box'
 import { StyledRoundedButton } from '@/components/core'
 
 // js cookie
-import Cookie from 'js-cookie'
+// import Cookie from 'js-cookie'
+
+// hooks
+import { useApp } from '@/hooks'
+
+// constants
+import { PREFERRED_MODE_KEY } from '@/constants'
 
 const saveCookies = (mode: string) => {
-  Cookie.set('preferred_color_mode', mode)
+  // Cookie.set('preferred_color_mode', mode)
+  window.localStorage.setItem(PREFERRED_MODE_KEY, mode)
 }
 
 const SwitchDarkMode: FC = () => {
-  const isDark = useMemo(() => {
-    return Cookie.get('preferred_color_mode') === 'dark'
-  }, [])
+  const { isDark, setIsDark } = useApp()
 
   const toggleDarkMode = useCallback(() => {
-    const cookie = Cookie.get('preferred_color_mode')
-    saveCookies(cookie == 'dark' ? 'light' : 'dark')
-  }, [])
+    saveCookies(isDark ? 'light' : 'dark')
+    setIsDark(!isDark)
+  }, [isDark, setIsDark])
 
   return (
     <Box

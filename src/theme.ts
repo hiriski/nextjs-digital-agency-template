@@ -5,13 +5,12 @@ import { createTheme as createMuiTheme, Theme } from '@mui/material/styles'
 
 // theme configs
 import { ThemeConfig } from './configs'
-import Cookies from 'js-cookie'
 
-export const createTheme = (): Theme => {
-  const isDark = Cookies.get('preferred_color_mode') === 'dark' ? true : false
+export const createTheme = (isDark?: boolean): Theme => {
   const palette = isDark
     ? { ...ThemeConfig.paletteBase, ...ThemeConfig.paletteDark }
     : { ...ThemeConfig.paletteBase, ...ThemeConfig.paletteLight }
+
   return createMuiTheme({
     palette,
     typography: ThemeConfig.typography,
@@ -19,7 +18,3 @@ export const createTheme = (): Theme => {
     shadows: ThemeConfig.shadows,
   })
 }
-
-const theme = createTheme()
-
-export default theme
