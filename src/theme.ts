@@ -7,10 +7,6 @@ import { createTheme as createMuiTheme, Theme } from '@mui/material/styles'
 import { ThemeConfig } from './configs'
 
 export const createTheme = (isDark?: boolean): Theme => {
-  // const isDark =
-  //   isDark
-  //     ? true
-  //     : false
   const palette = isDark
     ? { ...ThemeConfig.paletteBase, ...ThemeConfig.paletteDark }
     : { ...ThemeConfig.paletteBase, ...ThemeConfig.paletteLight }

@@ -31,7 +31,7 @@ const HomeServiceItem = ({ item }: ServiceItemProps) => {
       <Box
         sx={{
           cursor: 'pointer',
-          borderRadius: 2,
+          borderRadius: 4,
           px: 5,
           py: 4,
           position: 'relative',
@@ -99,7 +99,7 @@ const HomeServices = () => {
         width: '100%',
         pt: { xs: 8, md: 14 },
         pb: { xs: 6, md: 12 },
-        backgroundColor: palette.mode === 'dark' ? '#26273c' : '#087ae7',
+        backgroundColor: palette.mode === 'dark' ? '#151733' : '#087ae7',
       }}
     >
       <Container maxWidth='md'>
